@@ -10,6 +10,8 @@ namespace IsPrime
     {
         static void Main(string[] args)
         {
+            /*  
+            // yes this is an ugly way to remove this stuff....
             for ( int i =0; i < args.Count(); ++i)
             {
                 // there must be a better way/....
@@ -20,6 +22,58 @@ namespace IsPrime
                 Console.Write(args[i]);
                 Console.WriteLine();
             }
+            */
+
+
+            // set input....
+            int l;
+            l = args.Count();
+            if ( l==0)
+            {
+                Console.Write("I need a number to check");
+                return ;
+            }
+            int num;
+            if (!int.TryParse(args[0], out num))
+            {
+                Console.Write("The first input must be an integer.");
+                return ;
+            }
+
+            // do simple checks
+            if (num < 0)
+            {
+                Console.Write("A prime nubmer can not be negative.");
+                return;
+            }
+            if (num == 0)
+            {
+                Console.Write("Zero is not prime...");
+                return;
+            }
+            if (num == 1)
+            {
+                Console.Write("One is not prime...");
+                return;
+            }
+
+            // Now actually checking for a prime number
+            //naive solution; this is not going to be fast, and is going to check too many numbers
+
+            for (int i=2; i< num; ++i) if ( num % i == 0)
+                {
+                    Console.Write("The number entered: ");
+                    Console.Write(num);
+                    Console.Write(" is not prime.");
+                    return;
+                }
+
+            Console.Write("The number entered: ");
+            Console.Write(num);
+            Console.Write(" IS PRIME.");
+            return;
+
+
         }
     }
 }
