@@ -1,0 +1,1 @@
+c:\users\dan_d\documents\visual studio 2015\Projects\IsPrime\IsPrime\bin\Debug\IsPrime.exe.config
