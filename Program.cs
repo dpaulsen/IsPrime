@@ -8,6 +8,11 @@ namespace IsPrime
 {
     class Program
     {
+
+        /* a prime number only has factors 1 and itself 
+           This program checks if a number entered to the commandline is a prime number or not
+            */ 
+
         static void Main(string[] args)
         {
             /*  
@@ -58,7 +63,7 @@ namespace IsPrime
             }
 
             // Now actually checking for a prime number
-            //naive solution; this is not going to be fast, and is going to check too many numbers
+            //naive solution; this is not going to be fast, and is going to check too many factors
 
             for (int i=2; i< num; ++i) if ( num % i == 0)
                 {
