@@ -65,6 +65,7 @@ namespace IsPrime
             // Now actually checking for a prime number
             //naive solution; this is not going to be fast, and is going to check too many factors
 
+            // TODO
             for (int i=2; i< num; ++i) if ( num % i == 0)
                 {
                     Console.Write("The number entered: ");
