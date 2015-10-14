@@ -10,91 +10,29 @@ namespace MySpace
 
     class Program
     {
-        // public class PrimeNumber numberToCheck;
 
-        /* a prime number only has factors 1 and itself 
-           This program checks if a number entered to the commandline is a prime number or not
-            */
+        /// <summary>
+        /// This program checks if a number entered to the commandline is a prime number or not.
+        /// A prime number only has factors 1 and itself. 
+        /// A prime must also be a natural number (i.e. no: decimals, fractions or negatives or zero), also 1 is not prime.         
+        /// </summary>
+
 
         static void Main(string[] args)
         {
-           // PrimeNumber numberToCheck = new PrimeNumber(args[0]);
-            /*  
-            // yes this is an ugly way to remove this stuff....
-            for ( int i =0; i < args.Count(); ++i)
-            {
-                // there must be a better way/....
-                //Console.Write("i = %d ", i, " | args[i] = ", args[i]);
-                Console.Write("i = ");
-                Console.Write(i);
-                Console.Write(" | args[i] = ");
-                Console.Write(args[i]);
-                Console.WriteLine();
-            }
-            */
-
-
             // set input....
             if (args.Count() == 0)
             {
                 Console.Write("I need a number to check");
-                return;
             }
-            PrimeNumber numberToCheck = new PrimeNumber(args[0]);
-
-            Console.WriteLine(numberToCheck.display());
-
-            /*
-            int num;
-            if (!int.TryParse(args[0], out num))
+            else
             {
-                Console.Write("The first input must be an integer.");
-                return;
+                PrimeNumber numberToCheck = new PrimeNumber(args[0]);
+                Console.WriteLine(numberToCheck.display());
             }
-            */
-
-
-            /*
-            // do simple checks
-            if (num < 0)
-            {
-                Console.Write("A prime nubmer can not be negative.");
-                return;
-            }
-            if (num == 0)
-            {
-                Console.Write("Zero is not prime...");
-                return;
-            }
-            if (num == 1)
-            {
-                Console.Write("One is not prime...");
-                return;
-            }
-
-            // Now actually checking for a prime number
-            //naive solution; this is not going to be fast, and is going to check too many factors
-
-            // TODO
-            for (int i = 2; i < num; ++i)
-                if (num % i == 0)
-                {
-                    Console.Write("The number entered: ");
-                    Console.Write(num);
-                    Console.Write(" is not prime.");
-                    return;
-                }
-
-            Console.Write("The number entered: ");
-            Console.Write(num);
-            Console.Write(" IS PRIME.");
-            */
-
-
 
             return;
 
-
         }
     }
-} 
+}
