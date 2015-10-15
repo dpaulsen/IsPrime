@@ -1,6 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
+
 namespace PrimeNumberTests
 {
 
@@ -13,7 +14,10 @@ namespace PrimeNumberTests
             [TestMethod]
             public void TestMethod1()
             {
-            }
+            PrimeNumber numberToCheck = new PrimeNumber("foo");
+
+            Assert(numberToCheck.isInteger() != true);
+        }
         }
 
     
